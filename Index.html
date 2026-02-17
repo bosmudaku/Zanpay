@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadhan - Alzan & Syifa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle, #ffafbd, #ffc3a0);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Efek Background Love 3D Melayang */
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 20px;
+            animation: float 6s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Konten Utama */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            z-index: 10;
+            max-width: 80%;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        h2 { font-size: 1.8em; color: #d63384; }
+        p { font-style: italic; font-size: 1.1em; }
+
+        /* Posisi Kanan Bawah (Instagram & WA) */
+        .right-bottom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            z-index: 20;
+        }
+
+        .ig-tag {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #d63384;
+            margin-bottom: 5px;
+            background: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        .wa-info {
+            background: #25d366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+
+        /* Posisi Kiri Bawah (Live Chat) */
+        .left-bottom {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 20;
+        }
+
+        .live-chat {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            document.body.appendChild(heart);
+        }
+    </script>
+
+    <div class="container">
+        <h1>🌙 Selamat Datang di Bulan Ramadhan</h1>
+        <h2>Alzan 💖 Syifa</h2>
+        <p>Jangan lupa berikan doa pada kami agar tetap langgeng ya! ✨</p>
+    </div>
+
+    <div class="left-bottom">
+        <div class="live-chat">💬 Live Chat</div>
+    </div>
+
+    <div class="right-bottom">
+        <span class="ig-tag">@__x__zanan</span>
+        <div class="wa-info">
+            📞 WA: 085182674766
+        </div>
+    </div>
+
+</body>
+</html>
